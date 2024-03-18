@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Envoy-Cart</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Afacad">
+  <link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
+</head>
+<body>
+  <div class="banner">
+    <h1 class="logo">Envoy</h1>
+      <div class="options-container">
+        <a href="{{ url_for('signout') }}" class="option">Sign Out</a>
+      </div>
+  </div>
+  <div class="top">
+    <h1>My Cart</h1>
+  </div>
+    <main>
+      <div id="cartList" class="course"></div>
+      <button class="notify"><a href="{{ url_for('notification_page') }}">Notify Me!</a></button>
+      <button class="btn"><a href="{{ url_for('homepg') }}">Continue Shopping</a></button>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
+

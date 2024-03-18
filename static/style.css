@@ -1,0 +1,229 @@
+/* Top styling */
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8C1D40;
+  color: #FFC627;
+  padding: 20px 0; 
+  font-size: 40px;
+  width: 100%; 
+  font-family: 'Atma';
+}
+
+.logo {
+  font-family: 'Atma';
+  font-size: 25px;
+  padding: 4px;
+}
+
+.options-container {
+  display: flex;
+  text-decoration: none; 
+}
+
+.option {
+  font-family: 'Atma';
+  font-size: 20px;
+  margin-left: 20px; 
+  color: #FFC627 !important;
+  text-decoration: none;  
+}
+
+.option:hover {
+  color: #FFC627 !important;
+  text-decoration: underline dotted !important;  
+}
+
+
+/* Banner styling */
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #8C1D40;
+  color: #FFC627;
+  padding: 10px;
+  font-family: 'Atma';
+  font-size: 25px;
+  width: 100%;
+  z-index: 1000;
+}
+
+/*Main Body Styling*/
+body {
+    font-family: "Afacad";
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+  
+  
+  h2 {
+    font-family: 'Afacad';
+    color: #8C1D40;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  /*Courses Styling*/
+  .course {
+    border: 1px solid #8C1D40;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .course:hover{
+    border: 1px solid #FFC627;
+  }
+  
+  .course h2 {
+    color: #333;
+  }
+  
+  .course p {
+    color: #666;
+  }
+/*Professor Name Links*/
+  .link{
+    color: inherit; 
+    text-decoration: none; 
+  }
+  
+  .link:hover {
+    text-decoration: underline dotted;
+    text-decoration-color: #FFC627;
+  }
+  
+  /* General Button Design */
+  .btn {
+    background-color: #8C1D40;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border: 2px solid #8C1D40;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Afacad";
+    text-decoration: none; 
+  }
+  
+  .btn a {
+    color: inherit; 
+    text-decoration: none; 
+  }
+  
+  .btn:hover {
+    color: #8C1D40;
+    background-color: #fff;
+  }
+  
+  .btn:hover a {
+    color: #8C1D40;
+  }
+
+  .btn.added {
+    background-color: green;
+    color: #fff;
+    border-color: green;
+  }
+
+/*notify button design*/
+.notify{
+  background-color: #8C1D40;
+  color: #fff;
+  padding: 10px;
+  margin:60px;
+  border: none;
+  border: 2px solid #8C1D40;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Afacad";
+  text-decoration: none; 
+}
+
+.notify a {
+  color: inherit; 
+  text-decoration: none; 
+}
+
+.notify:hover {
+  color: #8C1D40;
+  background-color: #fff;
+}
+
+.notify:hover a {
+  color: #8C1D40;
+}
+
+.notiftxt{
+  font-size: 25px;
+}
+
+.backhome{
+  background-color: #8C1D40;
+  color: #fff;
+  padding: 10px;
+  margin-top: 40px;
+  border: none;
+  border: 2px solid #8C1D40;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Afacad";
+  text-decoration: none; 
+}
+
+.backhome a {
+  color: inherit; 
+  text-decoration: none; 
+}
+
+.backhome:hover {
+  color: #8C1D40;
+  background-color: #fff;
+}
+
+.backhome:hover a {
+  color: #8C1D40;
+}
+
+/*Scroll to Top Button*/
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #8C1D40;
+  color: #fff;
+  padding: 10px;
+  border: 2px solid #8C1D40;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+  border: 2px solid #FFC627;
+}
+
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}

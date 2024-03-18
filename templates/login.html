@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Envoy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='entry.css') }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Afacad">
+  <link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
+</head>
+
+<body>
+  <h1>
+    Envoy
+  </h1>
+  <div class="container">
+    <h2>Login</h2>
+    <form class="lgn" id="loginForm" action="/login" method="post">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+    
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    
+      <button type="submit" class="btn">Login</button>
+    </form>
+
+    <div class="signup-link">
+      <p>Don't have an account? <a href="{{ url_for('createacc') }}">Sign up</a></p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+    
+        var formData = {
+          email: document.getElementById("email").value,
+          password: document.getElementById("password").value
+        };
+    
+        fetch('/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (data.error) {
+            // Display an error message
+            var errorMessage = document.getElementById('errorMessage');
+            if (errorMessage) {
+              errorMessage.textContent = data.error; // Set the error message
+              errorMessage.style.display = 'block'; // Make the error message visible
+            }
+          } else {
+            window.location.href = '/homepg'; // Adjust the redirection URL as needed
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Invalid Credentials. Please try again.'); // Show an alert for any fetch error
+        });
+      });
+    });
+  </script>
+    
+    
+</body>
+
+</html>

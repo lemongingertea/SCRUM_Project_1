@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W.P. Carey Course Catalog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Afacad">
+    <link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
+</head>
+<body>
+<div class="banner">
+    <h1 class="logo">Envoy</h1>
+    <div class="options-container">
+        <a class="option" href="{{ url_for('cart') }}"> My Cart</a>
+        <a class="option" href="{{ url_for('signout') }}">Sign Out</a>
+    </div>
+</div>
+<div class="top">
+    <h1>Course Catalog</h1>
+</div>
+
+<main>
+    <h2>Closed Courses</h2>
+    <div id="closedCoursesList" class="course-list">
+        {% for course in closed_courses %}
+            <div class="course">
+                <h3>{{ course['course_name'] }}</h3>
+                <h4>Professor: <a href="{{ course['course_link'] }}"
+                                  title="View Rate My Professor: {{ course['professor'] }}" class="link">{{ course['professor'] }}</a>
+                </h4>
+                <p>{{ course['course_description'] }}</p>
+                <button class='btn' onclick="toggleButton(this)">Add</button>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2>Open Courses</h2>
+    <div id="openCoursesList" class="course-list">
+        {% for course in open_courses %}
+            <div class="course">
+                <h3>{{ course['course_name'] }}</h3>
+
+                <h4>Professor: <a href="{{ course['course_link'] }}"
+                                  title="View Rate My Professor: {{ course['professor'] }}" class="link">{{ course['professor'] }}</a>
+                </h4>
+                <p>{{ course['course_description'] }}</p>
+            </div>
+        {% endfor %}
+    </div> 
+</main>
+<div id="scrollToTopBtn" onclick="scrollToTop()">&#8673; Top</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+</body>
+</html>
+
+
+
+
+
